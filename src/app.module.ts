@@ -4,9 +4,11 @@ import { AppService } from './app.service';
 import { CatsController } from './cats/cats.controller';
 import { AdminController } from './admin/admin.controller';
 import { AccountController } from './account/account.controller';
+import { WebsocketModule } from './example/websocket/websocket.module';
+import { RestModule } from './example/rest/rest.module';
 
 @Module({
-  imports: [],
+  imports: [WebsocketModule, RestModule],
   controllers: [AppController, CatsController, AdminController, AccountController],
   providers: [AppService],
 })
